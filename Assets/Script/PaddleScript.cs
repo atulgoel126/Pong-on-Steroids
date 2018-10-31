@@ -9,7 +9,6 @@ public class PaddleScript : MonoBehaviour {
 
     //All these variable values have to be taken from GameManager
     private GameObject ballReference;
-    private float paddleForce;
     private float paddleMovementSpeed;
 
     //These define the top and bottom limit for the paddle to move.
@@ -27,7 +26,6 @@ public class PaddleScript : MonoBehaviour {
     private void Start()
     {
         ballReference = GameManager.gameManager._ballRef;
-        paddleForce = GameManager.gameManager._paddleForce;
         paddleMovementSpeed = GameManager.gameManager._paddleMovementSpeed;
 
         //Reducing the half of the length of the paddle and adding half of the side of the border cube
@@ -70,7 +68,6 @@ public class PaddleScript : MonoBehaviour {
         {
             return;
         }
-
 
         //Debug.Log(ballReference.GetComponent<Rigidbody>().velocity);
 

@@ -7,7 +7,7 @@ using UnityEngine;
 public class BGMManager : MonoBehaviour {
 
     public AudioSource audioSource;
-
+    //Singleton
     public static BGMManager bGMManager;
 
 	// Use this for initialization
@@ -22,7 +22,7 @@ public class BGMManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-
+        //Loop the background music forever
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
         audioSource.loop = true;

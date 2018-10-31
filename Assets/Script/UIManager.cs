@@ -28,12 +28,15 @@ public class UIManager : MonoBehaviour {
         centerLine.SetActive(false);
     }
 
+    //Not efficient
+    //Should be event based instead
     private void Update()
     {
         scoreLeft.text = "Score : " + ScoreManager.scoreManager.scoreLeft.ToString();
         scoreRight.text = "Score : " + ScoreManager.scoreManager.scoreRight.ToString();
     }
 
+    //This is the start of the game.
     IEnumerator startCountdown()
     {
         if (startText == null)

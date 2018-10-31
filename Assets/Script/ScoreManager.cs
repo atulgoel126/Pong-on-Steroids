@@ -49,6 +49,7 @@ public class ScoreManager : MonoBehaviour {
         }
     }
 
+    //When the game ends, change sounds and start a timer for restart.
     public void endGame(string s)
     {
         UIManager.uIManager.EndGame(s);

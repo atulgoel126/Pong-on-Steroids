@@ -14,12 +14,12 @@ public class DeadZoneScript : MonoBehaviour {
         RIGHT
     };
 
-    private int scoreValue;
-
+    //stores the side
     public DeathZoneDirection direction;
 
     private void OnTriggerEnter(Collider other)
     {
+        //if a ball enters the zone, destroy the ball, add score and make sounds!
         if (other.gameObject.CompareTag("ball"))
         {
             ScoreManager.scoreManager.addScore(GameManager.gameManager._scoreValue, direction);
